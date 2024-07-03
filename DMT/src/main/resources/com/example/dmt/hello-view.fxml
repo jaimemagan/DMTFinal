@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.transform.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="768.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dmt.HelloController">
+    <children>
+        <!-- Player 1 (Bottom) -->
+        <VBox layoutX="300.0" layoutY="600.0" spacing="10.0">
+            <HBox fx:id="player1Hand" spacing="10.0" />
+            <HBox>
+                <Button fx:id="drawCardButton" onAction="#drawCard" text="Tomar carta" />
+                <Button fx:id="playCardButton" onAction="#playCard" text="Jugar carta" />
+            </HBox>
+        </VBox>
+
+        <!-- Player 2 (Left) -->
+        <VBox layoutX="150.0" layoutY="300.0" spacing="10.0">
+            <HBox fx:id="player2Hand" spacing="10.0">
+                <transforms>
+                    <Rotate angle="90" />
+                </transforms>
+            </HBox>
+        </VBox>
+
+        <!-- Player 3 (Top) -->
+        <VBox layoutX="300.0" layoutY="125.0" spacing="10.0">
+            <HBox fx:id="player3Hand" spacing="10.0" />
+        </VBox>
+
+        <!-- Player 4 (Right) -->
+        <VBox layoutX="650.0" layoutY="300.0" spacing="10.0">
+            <HBox fx:id="player4Hand" spacing="10.0">
+                <transforms>
+                    <Rotate angle="90" />
+                </transforms>
+            </HBox>
+        </VBox>
+
+        <!-- Character selection -->
+        <VBox fx:id="characterSelection" layoutX="658.0" layoutY="434.0" spacing="10.0">
+            <Button fx:id="azzanButton" onAction="#selectCharacter" text="Azzan" />
+            <Button fx:id="blorpButton" onAction="#selectCharacter" text="Blorp" />
+            <Button fx:id="delilahButton" onAction="#selectCharacter" text="Delilah" />
+            <Button fx:id="liaButton" onAction="#selectCharacter" text="Lia" />
+            <Button fx:id="minscandbooButton" onAction="#selectCharacter" text="Minsc and Boo" />
+            <Button fx:id="suthaButton" onAction="#selectCharacter" text="Sutha" />
+        </VBox>
+    </children>
+</AnchorPane>
